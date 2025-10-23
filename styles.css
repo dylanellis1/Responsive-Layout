@@ -9,16 +9,19 @@ body {
     line-height: 1.6;
 }
 
-header {
+header.header-container {
     background-color: #120323;
     color: white;
     text-align: center;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-header img {
+header.header-container img {
     display: block;
-    margin: 0 auto;
     width: 100px;
 }
 
@@ -26,7 +29,26 @@ main {
     padding: 1rem;
 }
 
-.sidebar {
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border: 5px solid #d9043d;
+}
+
+figcaption {
+    padding: 1rem 0;
+}
+
+aside {
     background-color: #97bf04;
     padding: 1rem;
     text-align: center;
@@ -39,65 +61,44 @@ footer {
     padding: 1rem;
 }
 
-img.puffin {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
-    border: 5px solid #d9043d;
-}
-
 @media (min-width: 768px) {
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+    figure {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
 
-    img.puffin {
+    figure img {
         width: 50%;
     }
 
-    .photo-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .caption {
+    figcaption {
         flex: 1;
-        padding: 1rem;
         text-align: left;
     }
 
-    .sidebar {
+    aside {
         width: 100%;
         margin-top: 1rem;
     }
 }
 
 @media (min-width: 1000px) {
-    main {
+    #container {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
         gap: 1rem;
+        align-items: flex-start;
     }
 
-    .content {
+    main {
         flex: 2;
     }
 
-    .sidebar {
+    aside {
         flex: 1;
-        background-color: #97bf04;
     }
 
-    img.puffin {
+    figure img {
         width: 100%;
-        height: auto;
     }
 }

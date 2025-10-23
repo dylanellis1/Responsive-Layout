@@ -77,3 +77,27 @@ img.puffin {
         margin-top: 1rem;
     }
 }
+
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .content {
+        flex: 2;
+    }
+
+    .sidebar {
+        flex: 1;
+        background-color: #97bf04;
+    }
+
+    img.puffin {
+        width: 100%;
+        height: auto;
+    }
+}
